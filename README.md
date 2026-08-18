@@ -55,7 +55,7 @@ de tabela dispersa por fonte.
 
 ## Imagens
 
-*(prints do dashboard em breve)*
+![Mapa global de usinas nucleares e ranking por país](imagens/mapa-global.png)
 
 ## Como Reproduzir
 
