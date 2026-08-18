@@ -12,37 +12,54 @@ por país.
 
 Dados sobre usinas nucleares vêm de fontes internacionais dispersas,
 cada uma com seu próprio padrão, idioma e formato. Sem consolidação,
-fica difícil comparar países de forma justa: número de reatores não
-é a mesma coisa que geração real, e essa distinção se perde numa
-tabela crua.
+fica difícil comparar países de forma justa: número de reatores não é
+a mesma coisa que geração real, e essa distinção se perde numa tabela
+crua.
 
-## A Solução
+## Dados
 
-Modelo consolidando dados da IAEA, World Nuclear Association e bases
-públicas num único dataset, com:
+- **IAEA (International Atomic Energy Agency)**
+- **World Nuclear Association**
+- Bases públicas complementares (Excel/CSV, APIs)
 
-- Mapa interativo com a localização de cada usina
-- Capacidade instalada (MW) e energia gerada (GWh) por país
-- Filtros por continente, status (ativa/inativa) e tipo de reator
-- Medidas DAX pra comparar países por número de usinas, geração total
-  e produção média por reator
+## Tratamento e Modelagem
 
-Painel dividido em visão geral, análise por país, mapa global e
-ranking, pra separar "quantos reatores tem" de "quanto realmente
-produz".
+Unificação e padronização dos dados de reatores, produção, localização
+e status operacional (ativa/inativa) num único dataset. Medidas em DAX
+para comparar países por número de usinas, geração total e produção
+média por reator.
 
-## Resultado
-
-O dashboard deixa visível algo que não aparece numa lista simples:
-países com muitos reatores nem sempre são os que mais geram energia.
-Isso serve de base pra quem estuda matriz energética, política
-pública ou só quer entender a distribuição real da energia nuclear
-no mundo, sem depender de tabela dispersa por fonte.
-
-## Stack
+## Tecnologias
 
 | Camada | Tecnologia |
 |---|---|
 | Modelagem | Power BI Service, DAX |
 | Visualização geográfica | Azure Maps |
 | Fontes de dados | IAEA, World Nuclear Association, Excel/CSV, APIs públicas |
+
+## Dashboard
+
+Mapa interativo com a localização de cada usina, capacidade instalada
+(MW) e energia gerada (GWh) por país, filtros por continente, status
+e tipo de reator. Painel dividido em visão geral, análise por país,
+mapa global e ranking, pra separar "quantos reatores tem" de "quanto
+realmente produz".
+
+## Principais Insights
+
+Países com muitos reatores nem sempre são os que mais geram energia,
+algo que não aparece numa lista simples de contagem. Isso serve de
+base pra quem estuda matriz energética, política pública ou só quer
+entender a distribuição real da energia nuclear no mundo, sem depender
+de tabela dispersa por fonte.
+
+## Imagens
+
+*(prints do dashboard em breve)*
+
+## Como Reproduzir
+
+Este painel foi construído no Power BI a partir de dados públicos da
+IAEA e da World Nuclear Association. Não há pipeline de código
+associado, o relatório publicado acima permite exploração interativa
+completa dos filtros e visualizações.
